@@ -14,7 +14,6 @@ export default function Home() {
   const [errMsg, setErrMsg] = useState("");
 
   useEffect(() => {
-    console.log("index");
     socket.on("userId", (id) => {
       setUserId(id);
     });
