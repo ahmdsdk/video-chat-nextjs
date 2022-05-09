@@ -8,18 +8,18 @@ export default function VideoChat({ userName, userId, setUserId, socket }) {
 	const [stream, setStream] = useState();
 	const [receivingCall, setReceivingCall] = useState(false);
 	const [caller, setCaller] = useState("");
-    const [callerName, setCallerName] = useState("");
-    const [nameToCall, setNameToCall] = useState("");
+    	const [callerName, setCallerName] = useState("");
+    	const [nameToCall, setNameToCall] = useState("");
 	const [callerSignal, setCallerSignal] = useState();
 	const [callAccepted, setCallAccepted] = useState(false);
 	const [idToCall, setIdToCall] = useState("");
 	const [callEnded, setCallEnded] = useState(true);
-    const [allUsers, setAllUsers] = useState([]);
-    const [getInitialUsers, setGetInitialUsers] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
-    const [usersInCall, setUsersInCall] = useState([]);
-    const [peers, setPeers] = useState([]);
-    const [streams, setStreams] = useState([]);
+    	const [allUsers, setAllUsers] = useState([]);
+    	const [getInitialUsers, setGetInitialUsers] = useState(false);
+    	const [showMenu, setShowMenu] = useState(false);
+    	const [usersInCall, setUsersInCall] = useState([]);
+    	const [peers, setPeers] = useState([]);
+    	const [streams, setStreams] = useState([]);
 
 	const myVideo = useRef();
 	const peersRef = useRef([]);
