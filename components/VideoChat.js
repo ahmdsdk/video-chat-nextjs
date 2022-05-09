@@ -36,7 +36,7 @@ export default function VideoChat({ userName, userId, setUserId, socket }) {
         socket.emit("getUsers");
 
         socket.on("allUsers", (users) => {
-            console.log("got users", users);
+            // console.log("got users", users);
             setAllUsers(users);
             setGetInitialUsers(true);
         });
@@ -44,7 +44,7 @@ export default function VideoChat({ userName, userId, setUserId, socket }) {
         // listen to when user got disconnected and connected again with a new socket id
         socket.on("userId", (id) => {
             if (id !== userId) {
-                console.log("updating user id");
+                // console.log("updating user id");
                 setUserId(id);
                 socket.emit("updateUserId", { name: userName, id: userId });
             }
@@ -64,7 +64,6 @@ export default function VideoChat({ userName, userId, setUserId, socket }) {
         });
 
         return () => {
-            console.log("offloading");
             socket.off("allUsers");
             socket.off("userId");
             socket.off("userCalling");
@@ -135,7 +134,7 @@ export default function VideoChat({ userName, userId, setUserId, socket }) {
 
         // remove all listeners when peer is closed
         peer.on('close', () => {
-            console.log('answer peer closed');
+            // console.log('answer peer closed');
             peer.removeAllListeners("signal");
             peer.removeAllListeners("stream");
             setStreams([]);
