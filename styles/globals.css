@@ -2,6 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background: #4776e6;
+	background: -webkit-linear-gradient(to right, #79e9ff, #4776e6);
+	background: linear-gradient(to right,#79e9ff, #4776e6);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
